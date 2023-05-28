@@ -22,9 +22,13 @@
 Со сите овие тестови успеавме да ги поминеме сите гранки.
 
 5. Сите тест случаеви за (user==null || user.getPassword()==null || user.getEmail()==null) се:
+ 
  T F F ->User user=null;
+ 
  F T F ->User user=new User(null,pas,null); Не е возможно првото да не е вистинито а второто или третото да е, бидејќи ако има една не нулева вредност објектов тогаш не е нулева вредност.
+ 
  F F T -> User user=new User(null,null,Darko@yahoo.com);
+ 
  F F F -> User user=new User("username","password","email");
 
 
